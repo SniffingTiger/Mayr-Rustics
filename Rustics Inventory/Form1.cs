@@ -16,5 +16,10 @@ namespace Rustics_Inventory
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
