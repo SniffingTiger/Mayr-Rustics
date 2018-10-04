@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Rustics_Inventory
 {
@@ -17,7 +20,33 @@ namespace Rustics_Inventory
             InitializeComponent();
         }
 
+        private void materialsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.materialsBindingSource.EndEdit();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void productNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productNameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
