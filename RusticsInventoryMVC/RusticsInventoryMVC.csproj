@@ -210,6 +210,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\READ_BEFORE_UPDATING_MODELS_with_EF.txt" />
     <Content Include="Models\RusticsDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RusticsDBModel.Context.cs</LastGenOutput>

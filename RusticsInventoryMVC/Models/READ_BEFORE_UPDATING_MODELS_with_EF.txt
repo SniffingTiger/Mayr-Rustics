@@ -1,0 +1,6 @@
+﻿For Product.cs, you must making the following data annotations after updating the model with Entity Framework:
+
+	- The property ProductName must have the annotation: [StringLength(50)]
+		This ensures that the Product Name will be only up to 50 characters long
+	- The property Description must have the annotation: [StringLength(1000)]
+		This ensures that the Description will only be up to 1,000 characters long

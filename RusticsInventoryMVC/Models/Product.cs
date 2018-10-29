@@ -11,6 +11,7 @@ namespace RusticsInventoryMVC.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Product
     {
@@ -21,11 +22,14 @@ namespace RusticsInventoryMVC.Models
         }
     
         public int ProductID { get; set; }
+        [StringLength(50)]
         public string ProductName { get; set; }
+        [StringLength(1000)]
         public string Description { get; set; }
         public System.DateTime CreateDate { get; set; }
         public System.DateTime ModifyDate { get; set; }
         public string HowTo { get; set; }
+        // TODO: create annotations on this page!!
         public Nullable<decimal> Price { get; set; }
         public Nullable<decimal> Weight { get; set; }
         public string Size { get; set; }
