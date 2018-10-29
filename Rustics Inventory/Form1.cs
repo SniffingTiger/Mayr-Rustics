@@ -20,15 +20,10 @@ namespace Rustics_Inventory
             InitializeComponent();
         }
 
-        private void materialsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.materialsBindingSource.EndEdit();
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rusticsDBDataSet.FullProductNameList' table. You can move, or remove it, as needed.
+            this.fullProductNameListTableAdapter.Fill(this.rusticsDBDataSet.FullProductNameList);
 
         }
 

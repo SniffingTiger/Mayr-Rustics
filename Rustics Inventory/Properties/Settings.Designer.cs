@@ -38,7 +38,7 @@ namespace Rustics_Inventory.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=rusticsserver.database.windows.net;Initial Catalog=RusticsDB;Persist " +
-            "Security Info=True;User ID=MilanAdmin;Password=Zionator12!@")]
+            "Security Info=True;User ID=MilanAdmin;Password=peshwerd1!")]
         public string RusticsDBConnectionString {
             get {
                 return ((string)(this["RusticsDBConnectionString"]));
