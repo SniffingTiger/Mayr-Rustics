@@ -15,19 +15,7 @@
             @Html.DisplayNameFor(model => model.ProductName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HowTo)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Weight)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Size)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AmountOnHand)
@@ -43,28 +31,13 @@
         <td>
             @Html.ActionLink(item.ProductName.ToString(), "Details", new { id = item.ProductID })</td>
         <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HowTo)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weight)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Size)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AmountOnHand)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ProductCategory.Category)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ProductID })
         </td>
     </tr>
 }
