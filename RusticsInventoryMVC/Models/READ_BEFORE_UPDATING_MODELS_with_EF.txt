@@ -1,7 +1,22 @@
 ﻿For Product.cs, you must making the following data annotations after updating the model with Entity Framework:
 
-	- The property ProductName must have the annotation: [StringLength(50)]
-		This ensures that the Product Name will be only up to 50 characters long
-	- The property Description must have the annotation: [StringLength(1000)]
-		This ensures that the Description will only be up to 1,000 characters long
-	- The property 
+	Add the following using statements:
+
+		using System.ComponentModel;
+		using System.ComponentModel.DataAnnotations;
+
+
+	- The property ProductName must have the annotations: [Required, DisplayName("Product Name"), StringLength(50)]
+		This ensures that the Product Name will be required and will only be up to 50 characters long.
+
+	- The property Description must have the annotations: [Required, StringLength(1000)]
+		This ensures that the Description will only be up to 1,000 characters long.
+
+	- The property Price must have the annotations: [DataType(DataType.Currency)] [RegularExpression(@"^\$?\d+(\.(\d{2}))?$")]
+		This ensures that the product prices will show with currency symbols and that the values entered will be currency values.
+	
+	- The property AmountOnHand must have the annotation: [DisplayName("On Hand")]
+		This ensures that the AmountOnHand title will be displayed as "On Hand"
+
+	- The property HowTo must have the annotation: [DisplayName("How To")]
+		This ensures that the HowTo title will be displayed as "How To"

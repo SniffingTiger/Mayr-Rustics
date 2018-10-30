@@ -11,6 +11,7 @@ namespace RusticsInventoryMVC.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     
     public partial class Product
@@ -22,18 +23,21 @@ namespace RusticsInventoryMVC.Models
         }
     
         public int ProductID { get; set; }
-        [StringLength(50)]
+        [Required, DisplayName("Product Name"), StringLength(50)]
         public string ProductName { get; set; }
-        [StringLength(1000)]
+        [Required, StringLength(1000)]
         public string Description { get; set; }
         public System.DateTime CreateDate { get; set; }
         public System.DateTime ModifyDate { get; set; }
+        [DisplayName("How To")]
         public string HowTo { get; set; }
-        // TODO: create annotations on this page!!
+        [RegularExpression(@"^\$?\d+(\.(\d{2}))?$")]
+        [DataType(DataType.Currency)]
         public Nullable<decimal> Price { get; set; }
         public Nullable<decimal> Weight { get; set; }
         public string Size { get; set; }
         public Nullable<int> CategoryID { get; set; }
+        [DisplayName("On Hand")]
         public Nullable<int> AmountOnHand { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
