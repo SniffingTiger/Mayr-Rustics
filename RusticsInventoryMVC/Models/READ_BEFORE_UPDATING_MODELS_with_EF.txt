@@ -19,4 +19,7 @@
 		This ensures that the AmountOnHand title will be displayed as "On Hand"
 
 	- The property HowTo must have the annotation: [DisplayName("How To")]
-		This ensures that the HowTo title will be displayed as "How To"
+
+	- The property CreateDate must have the annotation: [DisplayName("Date Created")]
+
+	- The property ModifyDate must have the annotation: [DisplayName("Last Modified")]
