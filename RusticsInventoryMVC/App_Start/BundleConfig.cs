@@ -23,8 +23,20 @@ namespace RusticsInventoryMVC
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/css/bootstrap.css",
+                      "~/Content/css/open-iconic-bootstrap.min.css",
+                      "~/Content/css/animate.css",
+                      "~/Content/css/owl.carousel.min.css",
+                      "~/Content/css/owl.theme.default.min.css",
+                      "~/Content/css/magnific-popup.css",
+                      "~/Content/css/aos.css",
+                      "~/Content/css/ionicons.min.css",
+                      "~/Content/css/bootstrap-datepicker.css",
+                      "~/Content/css/jquery.timepicker.css",
+                      "~/Content/css/flaticon.css",
+                      "~/Content/css/icomoon.css",
+                      "~/Content/css/style.css",
+                      "~/Content/css/site.css"));
         }
     }
 }
