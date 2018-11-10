@@ -17,7 +17,7 @@
         <dd>
             @Html.DisplayFor(model => model.ProductName)
         </dd>
-        
+
         <dt>
             <br />
             @Html.DisplayNameFor(model => model.Description)
@@ -86,6 +86,48 @@
         <dd>
             <br />
             @Html.DisplayFor(model => model.ProductCategory.Category)
+        </dd>
+
+        <dt>
+            <br />
+            @Html.DisplayNameFor(model => model.ProductMaterials)
+        </dt>
+
+        <dd>
+            <br />
+            @*@{ 
+                foreach (var item in Model.ProductMaterials)
+                {
+                    <p>
+                        @Html.DisplayFor(model => item.Material.MaterialName)
+                    </p>
+                }
+            }*@
+            <table>
+                @{
+                    var materialsList = Model.ProductMaterials.ToList();
+
+                    for (int i = 0; i <= Model.ProductMaterials.Count; i += 2)
+                    {
+                        if ((i) < materialsList.Count())
+                        {
+                            <tr>@Html.DisplayFor(model => materialsList[i].Material.MaterialName), </tr>
+                        }
+                        if ((i + 1) < materialsList.Count())
+                        {
+                            if ((i + 2) == materialsList.Count())
+                            {
+                                <tr>@Html.DisplayFor(model => materialsList[i + 1].Material.MaterialName)</tr>
+                            }
+                            else
+                            {
+                                <tr>@Html.DisplayFor(model => materialsList[i + 1].Material.MaterialName), </tr>
+                            }
+
+                        }
+                    }
+                }
+            </table>
         </dd>
 
         <dt>

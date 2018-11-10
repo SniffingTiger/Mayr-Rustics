@@ -19,6 +19,14 @@ namespace Rustics_Unit_Tests
             Assert.IsInstanceOfType(result, typeof(ActionResult));
         }
 
+        [TestMethod]
+        public void Index_Of_Products_Returns_ActionResult()
+        {
+            ProductsController controller = new ProductsController();
+            ActionResult result = controller.Index(null) as ActionResult;
 
+            Assert.IsNotNull(result);
+            Assert.IsInstanceOfType(result, typeof(ActionResult));
+        }
     }
 }

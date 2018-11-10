@@ -15,10 +15,18 @@ namespace RusticsInventoryMVC.Controllers
         private RusticsInventoryEntities db = new RusticsInventoryEntities();
 
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(int? categoryID)
         {
-            var products = db.Products.Include(p => p.ProductCategory);
-            return View(products.ToList());
+            if (categoryID is null)
+            {
+                var products = db.Products.Include(p => p.ProductCategory);
+                return View(products.ToList());
+            }
+            else
+            {
+                var products = db.Products.Where(p => p.ProductCategory.CategoryID == categoryID);
+                return View(products.ToList());
+            }
         }
 
         // GET: Products/Details/5
