@@ -27,7 +27,7 @@ namespace RusticsInventoryMVC.Models
         [Required, DisplayName("Product Name"), StringLength(50)]
         public string ProductName { get; set; }
 
-        [Required, StringLength(1000)]
+        [StringLength(1000)]
         public string Description { get; set; }
 
         [DisplayName("Date Created")]
