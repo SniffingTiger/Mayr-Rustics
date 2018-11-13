@@ -11,6 +11,7 @@ namespace RusticsInventoryMVC.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     
     public partial class ProductCategory
     {
@@ -20,6 +21,7 @@ namespace RusticsInventoryMVC.Models
             this.Products = new HashSet<Product>();
         }
     
+        [DisplayName("Category")]
         public int CategoryID { get; set; }
         public string Category { get; set; }
     
