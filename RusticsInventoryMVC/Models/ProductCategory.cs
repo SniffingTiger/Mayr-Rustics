@@ -23,6 +23,7 @@ namespace RusticsInventoryMVC.Models
     
         [DisplayName("Category")]
         public int CategoryID { get; set; }
+        [DisplayName("Category")]
         public string Category { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

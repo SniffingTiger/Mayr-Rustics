@@ -25,12 +25,18 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.ActionLink(item.ProductName.ToString(), "Details", new { id = item.ProductID })</td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
+            @{ if (item.Price is null)
+                {
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;--</p>
+                }
+             }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AmountOnHand)
