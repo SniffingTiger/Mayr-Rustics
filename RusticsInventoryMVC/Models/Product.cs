@@ -28,6 +28,7 @@ namespace RusticsInventoryMVC.Models
         public string ProductName { get; set; }
 
         [StringLength(1000)]
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
         [DisplayName("Date Created")]
